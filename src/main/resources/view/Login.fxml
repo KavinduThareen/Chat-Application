@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="721.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Frame%201.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="139.0" layoutY="268.0" prefHeight="51.0" prefWidth="444.0" style="-fx-background-color: tra;" />
+      <JFXButton layoutX="131.0" layoutY="374.0" onAction="#logOnAction" prefHeight="65.0" prefWidth="459.0" styleClass="button-with-style" stylesheets="@../style/button.css" text="Login">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

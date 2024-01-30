@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ClientController">
+   <children>
+      <ImageView fitHeight="560.0" fitWidth="889.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Frame%202.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textField" layoutX="87.0" layoutY="479.0" onAction="#textOnAction" prefHeight="54.0" prefWidth="618.0" promptText="Sent massege" style="-fx-background-color: tra;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label fx:id="lable" layoutX="14.0" layoutY="6.0" prefHeight="56.0" prefWidth="248.0" text="Label" textFill="#0d0303">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="72.0" layoutX="798.0" layoutY="479.0" onMouseClicked="#sent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-sent-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="43.0" layoutY="489.0" onMouseClicked="#imojiSent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-happy-24.png" />
+         </image>
+      </ImageView>
+      <JFXTextArea fx:id="scrollPane" layoutX="-2.0" layoutY="102.0" prefHeight="362.0" prefWidth="887.0" unFocusColor="#393737">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextArea>
+      <VBox fx:id="msgVbox" layoutY="101.0" onMouseClicked="#hideImoji" prefHeight="5.0" prefWidth="798.0" />
+      <AnchorPane fx:id="EmojiPane" layoutX="24.0" layoutY="209.0" prefHeight="255.0" prefWidth="207.0">
+         <children>
+            <GridPane layoutX="7.0" layoutY="11.0" prefHeight="244.0" prefWidth="200.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="0.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="99.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="66.0" fitWidth="71.0" onMouseClicked="#imoji1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-face-with-tears-of-joy-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="63.0" fitWidth="73.0" onMouseClicked="#imoji2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../img/icons8-face-with-tongue-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="57.0" fitWidth="88.0" onMouseClicked="#imoji3" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../img/icons8-face-with-peeking-eye-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="57.0" fitWidth="79.0" onMouseClicked="#imoji4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../img/icons8-face-with-rolling-eyes-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="56.0" fitWidth="86.0" onMouseClicked="#imoji5" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../img/icons8-confused-face-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="94.0" onMouseClicked="#imoji6" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../img/icons8-cat-with-tears-of-joy-48.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="54.0" fitWidth="43.0" layoutX="713.0" layoutY="485.0" onMouseClicked="#imgSent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-image-24.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
