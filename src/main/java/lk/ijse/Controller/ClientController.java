@@ -53,7 +53,7 @@ public class ClientController extends Thread {
 
     BufferedReader reader;
     PrintWriter writer;
-    Socket socket;
+    Socket remoteSocket;
     private FileChooser fileChooser;
     private File filePath;
 
@@ -66,10 +66,10 @@ public class ClientController extends Thread {
 
 
         try{
-            socket= new Socket("localhost",3002);
+            remoteSocket= new Socket("localhost",3002);
             System.out.println("Socket connected to server");
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            writer = new PrintWriter(socket.getOutputStream(), true);
+            reader = new BufferedReader(new InputStreamReader(remoteSocket.getInputStream()));
+            writer = new PrintWriter(remoteSocket.getOutputStream(), true);
 
             this.start();
 
@@ -152,22 +152,22 @@ public class ClientController extends Thread {
                     TextFlow tempFlow = new TextFlow();
 
                     if (!cmd.equalsIgnoreCase(lable.getText() + ":")) {
-                        Text txtName = new Text(cmd + " ");
-                        txtName.getStyleClass().add("txtName");
-                        tempFlow.getChildren().add(txtName);
+                        Text txtname = new Text(cmd + " ");
+                        txtname.getStyleClass().add("txtName");
+                        tempFlow.getChildren().add(txtname);
 
                         tempFlow.setStyle("-fx-color: rgb(239,242,255);" +
                                 "-fx-background-color: rgb(191,152,232);" +
-                                " -fx-background-radius: 20px");
-                        tempFlow.setPadding(new Insets(9,20,7,20));
+                                " -fx-background-radius: 10px");
+                        tempFlow.setPadding(new Insets(12,22,10,22));
                     }
 
                     tempFlow.getChildren().add(text);
-                    tempFlow.setMaxWidth(200); //200
+                    tempFlow.setMaxWidth(500); //200
 
                     TextFlow flow = new TextFlow(tempFlow);
 
-                    HBox hBox = new HBox(15); //12
+                    HBox hBox = new HBox(20); //12
 
 
 
@@ -188,9 +188,9 @@ public class ClientController extends Thread {
                         hBox.setPadding(new Insets(8,18,7,35));
 
                         flow2.setStyle("-fx-color: rgb(239,242,255);" +
-                                "-fx-background-color: rgb(232,24,87);" +
-                                "-fx-background-radius: 20px");
-                        flow2.setPadding(new Insets(9,20,7,20));
+                                "-fx-background-color: rgb(246,70,122);" +
+                                "-fx-background-radius: 10px");
+                        flow2.setPadding(new Insets(12,22,10,22));
                     }
 
                     Platform.runLater(() -> msgVbox.getChildren().addAll(hBox));

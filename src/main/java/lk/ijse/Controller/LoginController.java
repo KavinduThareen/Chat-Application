@@ -33,10 +33,8 @@ public class LoginController {
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
             try {
-                // Load client.fxml scene
                 Scene clientScene = new Scene(FXMLLoader.load(getClass().getResource("/view/client.fxml")));
 
-                // Set client.fxml scene
                 stage.setScene(clientScene);
             } catch (IOException ex) {
                 ex.printStackTrace();
