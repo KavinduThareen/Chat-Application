@@ -32,23 +32,11 @@ public class LoginController {
             name = username.getText();
             username.clear();
             Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(LoginController.class.getResource("/view/loading.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(LoginController.class.getResource("/view/client.fxml"))));
             stage.setTitle("chat");
             stage.setResizable(false);
             stage.centerOnScreen();
             stage.show();
-
-            Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
-                try {
-                    Scene clientScene = new Scene(FXMLLoader.load(getClass().getResource("/view/client.fxml")));
-                    stage.setResizable(false);
-                    stage.setScene(clientScene);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }));
-
-            timeline.play();
 
         }
 
