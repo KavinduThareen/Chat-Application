@@ -13,7 +13,7 @@ public class Luncher extends Application {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/Login.fxml"));
         Scene mainScene = new Scene(root);
         stage.setScene(mainScene);
-        stage.setTitle("chat");
+        stage.setResizable(false);
         stage.centerOnScreen();
         stage.show();
     }

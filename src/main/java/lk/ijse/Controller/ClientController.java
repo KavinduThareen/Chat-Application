@@ -163,7 +163,7 @@ public class ClientController extends Thread {
                     }
 
                     tempFlow.getChildren().add(text);
-                    tempFlow.setMaxWidth(500); //200
+                    tempFlow.setMaxWidth(200); //200
 
                     TextFlow flow = new TextFlow(tempFlow);
 
@@ -185,7 +185,7 @@ public class ClientController extends Thread {
                         TextFlow flow2 = new TextFlow(text2);
                         hBox.setAlignment(Pos.BOTTOM_RIGHT);
                         hBox.getChildren().add(flow2);
-                        hBox.setPadding(new Insets(8,18,7,35));
+                        hBox.setPadding(new Insets(10,20,9,40));
 
                         flow2.setStyle("-fx-color: rgb(239,242,255);" +
                                 "-fx-background-color: rgb(246,70,122);" +
@@ -274,9 +274,6 @@ public class ClientController extends Thread {
         textField.setText(emoji);
         EmojiPane.setVisible(false);
     }
-
-
-
 
     @FXML
     void textOnAction(ActionEvent mouseEvent) {

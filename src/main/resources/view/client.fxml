@@ -23,11 +23,6 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Label fx:id="lable" layoutX="24.0" layoutY="14.0" prefHeight="57.0" prefWidth="232.0" text="Label" textFill="#0d0303">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="54.0" fitWidth="72.0" layoutX="798.0" layoutY="479.0" onMouseClicked="#sent" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-sent-64.png" />
@@ -91,9 +86,14 @@
             </GridPane>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="54.0" fitWidth="43.0" layoutX="713.0" layoutY="485.0" onMouseClicked="#imgSent" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="lable" layoutX="128.0" layoutY="14.0" prefHeight="56.0" prefWidth="251.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="43.0" fitWidth="54.0" layoutX="717.0" layoutY="485.0" onMouseClicked="#imgSent" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/icons8-image-24.png" />
+            <Image url="@../img/icons8-image-24%20(1).png" />
          </image>
       </ImageView>
    </children>
